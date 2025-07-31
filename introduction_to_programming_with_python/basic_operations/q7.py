@@ -1,0 +1,1 @@
+int('3.1415') # ValueError, a float is not a valid integer value

@@ -1,0 +1,1 @@
+'foo' == 'Foo' # false, need to be same case

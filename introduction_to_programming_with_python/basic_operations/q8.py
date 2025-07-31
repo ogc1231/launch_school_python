@@ -1,0 +1,1 @@
+'12' < '9' # True, 1 is less than 9, char by char comparsion with strings
