@@ -1,0 +1,2 @@
+my_object1 == my_object2 # compares the values of the objects, they have teh same elements
+my_object1 is my_object2 # compares in they reference same object in memory, both object stored in same location
