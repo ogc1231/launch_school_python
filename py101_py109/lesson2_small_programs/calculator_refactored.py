@@ -9,7 +9,6 @@ def invalid_number(num):
         int(num)
     except ValueError:
         return True
-    
     return False
 
 print_msg('Welcome to the calculator')
@@ -26,12 +25,14 @@ while invalid_number(num2):
     print_msg('Not valid number')
     num2 = prompt("Enter second number: ")
 
-operation = prompt("Enter operation: 1) add, 2) subtract, 3) multiply, 4) divide: ")
+operation = prompt("""Enter operation:
+                    1) add, 2) subtract, 3) multiply, 4) divide: """)
 
 while operation not in ['1', '2', '3', '4']:
     print_msg('Not valid operation')
-    operation = prompt("Enter operation: 1) add, 2) subtract, 3) multiply, 4) divide: ")
-    
+    operation = prompt("""Enter operation:
+                        1) add, 2) subtract, 3) multiply, 4) divide: """)
+
 match operation:
     case '1': # add
         result = int(num1) + int(num2)
