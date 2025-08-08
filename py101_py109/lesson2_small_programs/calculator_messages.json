@@ -1,0 +1,22 @@
+{
+  "en": {
+    "welcome": "Welcome to Calculator!",
+    "number_prompt_1": "Enter the first number:",
+    "number_prompt_2": "Enter the second number:",
+    "invalid_number": "Hmm... that doesn't look like a valid number.",
+    "operation_prompt": "Choose an operation (1) add, (2) subtract, (3) multiply, (4) divide:",
+    "invalid_operation": "Must choose 1, 2, 3 or 4",
+    "result": "The result is {output}",
+    "another_operation": "Do you want to perform another calculation? (y/n)"
+  },
+  "es": {
+    "welcome": "Bienvenido a Calculadora!",
+    "number_prompt_1": "Introduzca el primer numero:",
+    "number_prompt_2": "Introduzca el segundo numero:",
+    "invalid_number": "Hmm... ese numero no parece valido.",
+    "operation_prompt": "Elija una operacion: (1) sumar, (2) restar, (3) multiplicar, (4) dividir:",
+    "invalid_operation": "Debe eligir 1, 2, 3 or 4",
+    "result": "El resultado es {output}",
+    "another_operation": "Desea realizar otro calculo? (s/n)"
+  }
+}
