@@ -1,3 +1,10 @@
+import json
+from pathlib import Path
+
+file_path = Path(__file__).parent / "file.json"
+with file_path.open() as file:
+    MESSAGES = json.load(file)
+
 def prompt(message):
     print(f"==> {message}")
 
@@ -9,28 +16,28 @@ def invalid_number(number_str):
 
     return False
 
-prompt('Welcome to Calculator!')
+prompt(MESSAGES['welcome'])
 
 while True:
-    prompt("What's the first number?")
+    prompt(MESSAGES['first_num'])
     number1 = input()
 
     while invalid_number(number1):
-        prompt("Hmm... that doesn't look like a valid number.")
+        prompt(MESSAGES['invalid_number'])
         number1 = input()
 
-    prompt("What's the second number?")
+    prompt(MESSAGES['second_num'])
     number2 = input()
 
     while invalid_number(number2):
-        prompt("Hmm... that doesn't look like a valid number.")
+        prompt(MESSAGES['invalid_number'])
         number2 = input()
 
-    prompt("What operation would you like to perform?\n1) Add 2) Subtract 3) Multiply 4) Divide")
+    prompt(MESSAGES['operation'])
     operation = input()
 
     while operation not in ["1", "2", "3", "4"]:
-        prompt("You must choose 1, 2, 3, or 4")
+        prompt(MESSAGES['choice'])
         operation = input()
 
     match operation:
@@ -45,8 +52,9 @@ while True:
 
     prompt(f"The result is {output}")
 
-    prompt('Do you wan to make another calculation?, y or n')
+    prompt(MESSAGES['another'])
     answer = input()
 
-    if answer != 'y':
+    if answer and answer[0].lower() != 'y':
+        prompt(MESSAGES['goodbye'])
         break
