@@ -35,14 +35,15 @@ while True:
 
     display_winner(user_hand, computer_hand)
 
-    ans = input('Play again? y/n ').lower()
 
     while True:
+        ans = input('Play again? y/n ').lower()
+
         if ans.startswith('n') or ans.startswith('y'):
             break
-        prompt('Please enter "y" or "n".')
-        ans = input().lower()
+        else:
+            prompt('Please enter "y" or "n".')
     
-    if ans == 'n':
+    if ans[0] == 'n':
         prompt('Thanks for playing')
         break
