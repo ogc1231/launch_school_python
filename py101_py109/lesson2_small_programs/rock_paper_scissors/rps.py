@@ -13,7 +13,7 @@ while True:
         else:
             break
 
-    computer_hand = hand_list[random.randint(0, len(hand_list) - 1)]
+    computer_hand = random.choice(hand_list)
 
     print(f'User chose: {user_hand}')
     print(f'Computer chose: {computer_hand}')
